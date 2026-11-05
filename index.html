@@ -6,9 +6,9 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Магазин учебников">
   <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
-  <meta property="og:image" content="https://anastasiasemenovna.github.io/kr1-html-css-shop/images/preview.jpg">
   <title>Каталог товаров</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
@@ -50,6 +50,17 @@
   </p>
 </section>
 <section class="hero">
+  <picture>
+    <source media="(min-width: 1200px)" srcset="images/hero-desktop.jpg">
+    <source media="(min-width: 768px)" srcset="images/hero-tablet.jpg">
+    <img
+      src="images/hero-mobile.jpg"
+      alt="Каталог учебных товаров"
+      width="640"
+      height="360"
+      class="hero__image"
+    >
+  </picture>
   <h1>Учебный интернет-магазин</h1>
   <p>
     Это стартовая страница учебного frontend-проекта.
