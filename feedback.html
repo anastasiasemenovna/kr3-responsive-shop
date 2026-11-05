@@ -6,6 +6,8 @@
   <meta name="description" content="Контактная информация учебного интернет-магазина.">
   <title>Контакты — Учебный интернет-магазин</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/feedback.js" defer></script>
 </head>
 <body>
   <header>
@@ -32,12 +34,45 @@
     </nav>
 
     <section class="section" id="feedback">
-      <h2>Обратная связь</h2>
-      <p>
-        Мы стараемся прислушиваться к нашим покупателям. Если вы знаете как мы можем улучшить наш интернет-магазин, то можете заполнить форму.
-      </p>
-      <a class="button product-card__button" type="button" data-product="Форма">Заполнить форму</a>
-    </section>
+    <h2>Обратная связь</h2>
+    <p>
+    Мы стараемся прислушиваться к нашим покупателям. Если вы знаете как мы можем улучшить наш интернет-магазин, то можете заполнить форму.
+    </p>
+    <button class="button" type="button" id="open-feedback-dialog">
+      Заполнить форму
+    </button>
+     </section>
+
+     <!-- В самом низу body, перед </body> -->
+<dialog class="order-dialog" id="feedback-dialog" aria-labelledby="feedback-dialog-title">
+  <h2 class="order-dialog__title" id="feedback-dialog-title">Обратная связь</h2>
+
+    <form class="order-form" action="#" method="post" novalidate>
+      <div class="order-form__group">
+        <label class="order-form__label" for="fb-name">Имя</label>
+        <input class="order-form__input" id="fb-name" name="name" type="text" required>
+      </div>
+
+      <div class="order-form__group">
+        <label class="order-form__label" for="fb-email">E-mail</label>
+        <input class="order-form__input" id="fb-email" name="email" type="email" required>
+      </div>
+
+      <div class="order-form__group order-form__group--wide">
+        <label class="order-form__label" for="fb-comment">Комментарий</label>
+        <textarea class="order-form__textarea" id="fb-comment" name="comment"></textarea>
+      </div>
+
+      <div class="order-form__actions">
+        <button class="button button--secondary" type="button" id="close-feedback-dialog">
+          Закрыть
+        </button>
+        <button class="button button--primary" type="submit">
+          Отправить
+        </button>
+      </div>
+    </form>
+  </dialog>
   </main>
   <footer>
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
