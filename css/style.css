@@ -675,3 +675,34 @@ html {
   margin-top: 0.5rem;
   color: #555;
 }
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 1000;
+  padding: 8px 12px;
+  color: #ffffff;
+  background-color: #111111;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 16px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-primary, #0057b8);
+  outline-offset: 3px;
+}
+
+.site-nav__link:focus-visible,
+.button:focus-visible,
+.order-form__input:focus-visible,
+.order-form__textarea:focus-visible,
+.order-form__select:focus-visible {
+  outline: 3px solid var(--color-primary, #0057b8);
+  outline-offset: 3px;
+}

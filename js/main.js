@@ -26,6 +26,10 @@ orderButtons.forEach((button) => {
   });
 });
 
+if (window.location.hash === '#order-dialog' && orderDialog) {
+  orderDialog.showModal();
+}
+
 // Закрываем модальное окно по кнопке «Закрыть».
 closeDialogButton.addEventListener('click', () => {
   orderDialog.close();
